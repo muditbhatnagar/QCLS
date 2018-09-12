@@ -1,0 +1,258 @@
+ <% if user_signed_in? %>
+
+    
+
+    <%= link_to "Sign out",
+  destroy_user_session_path, :method => :delete %>
+
+  <% else %>
+
+    <%= link_to "Sign up",
+  new_user_registration_path %> or <%= link_to "sign in",
+  new_user_session_path %>
+
+  <% end %>
+
+
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Q C L S</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> 
+    <!-- Bootstrap Core CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/assets/css/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/assets/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="/assets/css/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fontawesome.com/v4.7.0/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header col-md-6">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="/assets/logo.png" alt=""></a>
+				<span>Quality Comfort Living Services LLC</span>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#">
+                       <img src="/assets/icon4.png" alt="">Services
+                    </a>
+                   
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#">
+                        <img src="/assets/icon5.png" alt="">Contact Us
+                    </a>
+                   
+                    <!-- /.dropdown-tasks -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                         <img src="/assets/icon6.png" alt="">Help
+                    </a>
+                   
+                    <!-- /.dropdown-alerts -->
+                </li>
+           
+            </ul>
+         
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+			<div class="whitebox">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Sign Up</a></li>
+    <li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Sign In</a></li>
+
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane" id="home">
+	<form class="fromlist">
+			<div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+  <div class="form-group">
+   <select class="form-control">
+  <option>User Type</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select>
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="Address 1" type="text">
+  </div>
+
+<div class="form-group">
+    <input class="form-control" placeholder="City" type="text">
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="ZIP" type="text">
+  </div>
+
+  </div>
+  <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+  <div class="form-group">
+  <input class="form-control" placeholder="Phone" type="email">
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="Address 2" type="text">
+  </div>
+<div class="form-group">
+    <input class="form-control" placeholder="State" type="text">
+  </div>
+
+  </div>
+  <div class="col-md-12 col-sm-12 col-lg-12 medicaldics">Account Details</div>
+    <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+  <div class="form-group">
+  <input class="form-control" placeholder="Phone" type="Email Address">
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="Address 2" type="Last Name">
+  </div>
+<div class="form-group">
+    <input class="form-control" placeholder="State" type="Confirm Password">
+  </div>
+
+  </div>
+      <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+  <div class="form-group">
+  <input class="form-control" placeholder="Phone" type="First Name">
+  </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="Address 2" type="Password">
+  </div>
+
+  </div>
+    <div class="col-md-12 col-sm-12 col-lg-12 checkleft">
+<div class="radio">
+  <label>
+   I agree to the Health Terms of Service
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+  </label>
+</div>
+<div class="radio">
+  <label>
+   I certify that I have read and agree to the Health Privacy Policy
+       <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+  </label>
+</div>
+<div class="radio">
+  <label>
+  I certify that I have read and agree to the Health Business Associate Agreement
+       <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+  </label>
+</div>
+</div>
+  <div class="col-md-12 col-sm-12 savebut">
+  <button type="submit" class="btn btn-default">Save</button>
+  </div>
+</form>
+	</div>
+    <div role="tabpanel" class="tab-pane active" id="profile">
+	<form class="frombox">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Email Address">
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-default">Sign Up</button>
+   <div class="checkbox">
+  
+    Need Help?
+  
+  </div>
+</form>
+</div>
+
+  </div>
+
+</div>
+					
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="/assets/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/assets/js/metisMenu.min.js"></script>
+
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/assets/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Qcls</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
