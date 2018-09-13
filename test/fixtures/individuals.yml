@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  individual_id: 1
+  country: MyString
+  state: MyString
+  zip: 1
+  md: false
+  dd: false
+  male: false
+  female: false
+  telephone: 
+  first_name: MyString
+  last_name: MyString
+  cell_phone: 
+  medicare_number: 
+  email: MyString
+  tabs_id: 1
+  address1: MyString
+  address2: MyString
+  medicaid_number: 
+
+two:
+  individual_id: 1
+  country: MyString
+  state: MyString
+  zip: 1
+  md: false
+  dd: false
+  male: false
+  female: false
+  telephone: 
+  first_name: MyString
+  last_name: MyString
+  cell_phone: 
+  medicare_number: 
+  email: MyString
+  tabs_id: 1
+  address1: MyString
+  address2: MyString
+  medicaid_number: 

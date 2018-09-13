@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  s_number: 1
+  individual_id: 1
+  first_name: MyString
+  last_name: MyString
+  created_by: MyString
+  status: false
+
+two:
+  s_number: 1
+  individual_id: 1
+  first_name: MyString
+  last_name: MyString
+  created_by: MyString
+  status: false

@@ -617,7 +617,7 @@ ul.list_select {
 	border-top: 0px;
 	border-left: 0;
 	border-right: 0;
-	background: transparent url('/assets/arrow_down.png');
+	background: transparent url('../images/arrow_down.png');
 	box-shadow: inherit;
 	padding-left: 0;
 	font-size: 17px;

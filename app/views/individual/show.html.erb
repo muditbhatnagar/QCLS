@@ -61,10 +61,9 @@
                 </li>
                 <!-- /.dropdown -->
                 <li class="dropdown">
-                    <a class="dropdown-toggle" href="">
-                        <img src="/assets/icon2.png"<%= link_to "print", "?", onclick: "printPage()" %> 
+                    <a class="dropdown-toggle" href="#">
+                        <img src="/assets/icon2.png" alt="">Print
                     </a>
-
                    
                     <!-- /.dropdown-tasks -->
                 </li>
@@ -178,26 +177,26 @@
 </thead>
 
 <body>
-  <% @individual.each do |individual|%>
-    <tr>
-     <td><%= individual.s_number %></td>
-      <td><%= individual.individual_id %></td>
-      <td><%= individual.first_name %></td>
-      <td><%= individual.last_name %></td>
-    </tr>
+ <% @individual.each do |ind| %>
+  <tr>
+  <td> <%= ind.text_field :s_no %></td>
+    <td><h3 <%= ind.individual_id %></h3></td>
+    <td><h3 <%= ind.first_name %></h3></td>
+    <td><h3 <%= ind.last_name %></h3></td>
+    <% end %>
+  </tr>
 </body>
-<% end %>
 <tbody>
-   <tr>
+  <!-- <tr>
     <td>1</td>
     <td>1236</td>
     <td>John</td>
     <td>Bravo</td>
     <td>Staff Name</td>
     <td><img src="/assets/active.png" alt=""></td>
-    <td><button><a href="/individual/new"><img src="/assets/setting.png" alt=""> Edit</button></td>
+    <td><img src="/assets/setting.png" alt=""> Edit</td>
     <td><img src="/assets/plus_icon.png" alt=""> Assign Form</td>
-  </tr> 
+  </tr> -->
   <!-- <tr>
     <td>1</td>
     <td>1236</td>
@@ -215,13 +214,13 @@
 </div>
 
             
-  <!-- /.panel-body -->
-    </div>
-      <button type="button" class="btn add_entry"> <a href="/individual/new">Add New Entry</button></a>
-    </div>
-      <!-- /.row -->
-    </div>
-    <!-- /#page-wrapper -->
+                        <!-- /.panel-body -->
+                    </div>
+          <button type="button" class="btn add_entry"> <a href="">Add New Entry</button></a>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
 
     </div>
     <!-- /#wrapper -->
