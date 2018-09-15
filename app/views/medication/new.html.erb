@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Q C L S</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> 
+    <!-- Bootstrap Core CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/assets/css/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/assets/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="/assets/css/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fontawesome.com/v4.7.0/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header col-md-6">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="/assets/logo.png" alt=""></a>
+				<span>Quality Comfort Living Services LLC</span>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#">
+                       <img src="/assets/icon1.png" alt="">Save
+                    </a>
+                   
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#">
+                        <img src="/assets/icon2.png" alt="">Print
+                    </a>
+                   
+                    <!-- /.dropdown-tasks -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                         <img src="/assets/icon3.png" alt="">Save As PDF
+                    </a>
+                   
+                    <!-- /.dropdown-alerts -->
+                </li>
+           
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+					<li>
+                            <a href="javascript:;"><img src="/assets/left_icon1.png" alt=""> Settings</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><img src="/assets/left_icon2.png" alt=""> Individual</a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="javascript:;">Individuals</a>
+                                </li>
+								</ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><img src="/assets/left_icon3.png" alt=""> eDoc Suite</a>
+							<ul class="nav nav-second-level">
+                                <li>
+                                    <a href="javascript:;">ISP/BSP Training</a>
+                                </li>
+                                 <li>
+                                  <a href="/individual/form2">Monthly Service</a>
+                                </li>
+                                </li>
+                                <li>
+                                  <a href="javascript:;">Monthly Bihaviour</a>
+                                </li>
+                                <li>
+                                  <a href="javascript:;">Medication</a>
+                                </li>
+                                <li>
+                                  <a href="javascript:;">Administration Record</a>
+                                </li>
+                                <li>
+                                  <a href="javascript:;">Medication Count</a>
+                                </li>
+								</ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><img src="/assets/left_icon4.png" alt=""> Folders</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><img src="/assets/left_icon5.png" alt=""> Calendars</a>
+                      
+                        </li>
+                        <li>
+                            <a href="javascript:;"><img src="/assets/left_icon6.png" alt=""> Help and Support</a>
+                     
+                        </li>
+                      <li>
+                            <a href="javascript:;"><img src="/assets/left_icon7.png" alt=""> Logout</a>
+                       
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+			<!-- <form class="fromlist"> -->
+      <%= form_for @medication, :url => {:action => "create" },  :html => {class: 'fromlist' } do |f| %>
+      
+			<div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+  <div class="form-group">
+  <%= f.text_field :name,:class=>"form-control",:placeholder => "Name" %>
+  </div>
+  <div class="form-group ">
+    <%= f.text_field :address,:class=>"form-control",:placeholder => "Address" %>
+  </div>
+
+
+  </div>
+  <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+  <div class="form-group">
+  <%= f.text_field :identified_by,:class=>"form-control",:placeholder => "Identified By" %>
+  </div>
+  <div class="form-group">
+     <%= f.text_field :allergies,:class=>"form-control",:placeholder => "Allergies" %>
+  </div>
+
+  </div>
+    <div class="col-md-12 col-sm-12 col-lg-12">
+	 <div class="form-group">
+    <%= f.text_field :diagbosis,:class=>"form-control",:placeholder => "Diagbosis" %>
+  </div>
+	</div>
+	    <div class="col-md-12 col-sm-12 col-lg-12">
+	 <div class="form-group">
+    <%= f.text_field :special_instruction,:class=>"form-control",:placeholder => "Special Instruction" %>
+  </div>
+	</div>
+	    <div class="col-md-12 col-sm-12 col-lg-12">
+	 <div class="form-group">
+    <%= f.text_field :emergency_medications,:class=>"form-control",:placeholder => "Emergency medications" %>
+  </div>
+	</div>
+	   <div class="col-md-12 col-sm-12 col-lg-12">
+	 <div class="form-group">
+    <input type="text" class="form-control" placeholder="Behaviours demonstrated for PRN meds">
+    <%= f.text_field :behaviours_meds,:class=>"form-control",:placeholder => "Behaviours demonstrated for PRN meds" %>
+
+
+  </div>
+	</div>
+  <div class="col-md-12 col-sm-12 col-lg-12 medicaldicsnew">Medication Routes:</div>
+  <div class="col-md-12 col-sm-12 col-lg-12 newcheck">
+	<ul>
+		<li>
+  <div class="radio">
+  <label>
+    <%= f.label :Vaginal,:class=>"control-label"  %>
+      <div class="col-sm-1  inputGroupContainer">
+      <%= f.check_box :vaginal %>  </label>
+</div>
+</li>
+<li>
+<div class="radio">
+  <label>
+    <%= f.label :Inhaler,:class=>"control-label"  %>
+      <div class="col-sm-1  inputGroupContainer">
+      <%= f.check_box :inhaler %>
+  </label>
+</div>
+</li>
+<li>
+<div class="radio">
+  <label>
+    <%= f.label :Otic_Rt_eye_Lt_eye,:class=>"control-label"  %>
+      <div class="col-sm-1  inputGroupContainer">
+      <%= f.check_box :optic_eye %>
+  </label>
+</div>
+
+</li>
+<li>
+<div class="radio">
+   <%= f.label :Rectal,:class=>"control-label"  %>
+      <div class="col-sm-1  inputGroupContainer">
+      <%= f.check_box :rectal %>
+  </label>
+</div>
+
+</li>
+<li>
+<div class="radio">
+  <label>
+    <%= f.label :Subcutaneous,:class=>"control-label"  %>
+      <div class="col-sm-1  inputGroupContainer">
+      <%= f.check_box :subcutaneous %>
+  </label>
+</div>
+
+</li>
+<li>
+<div class="radio">
+  <label>
+    <%= f.label :Sublingual,:class=>"control-label"  %>
+      <div class="col-sm-1  inputGroupContainer">
+      <%= f.check_box :sublingual %>
+  </label>
+</div>
+</li>
+<li>
+<div class="radio">
+  <label>
+    <%= f.label :Nebulizer,:class=>"control-label"  %>
+      <div class="col-sm-1  inputGroupContainer">
+      <%= f.check_box :nebulizer %>
+  </label>
+</div>
+</li>
+<li>
+<div class="radio">
+  <label>
+ <%= f.label :Otic_Rt_eye_Lt_ear,:class=>"control-label"  %>
+      <div class="col-sm-1  inputGroupContainer">
+      <%= f.check_box :optic_ear %>
+  </label>
+</div>
+</li>
+<li>
+<div class="radio">
+  <label>
+    <%= f.label :Vaginal,:class=>"control-label"  %>
+      <div class="col-sm-1  inputGroupContainer">
+      <%= f.check_box :vaginal %>
+  </label>
+</div>
+</li>
+<li>
+<div class="radio">
+  <label>
+   <%= f.label :Insulin,:class=>"control-label"  %>
+      <div class="col-sm-1  inputGroupContainer">
+      <%= f.check_box :insulin %>
+  </label>
+</div>
+</li>
+<li>
+<div class="radio">
+  <label>
+   <%= f.label :Glucagon,:class=>"control-label"  %>
+      <div class="col-sm-1  inputGroupContainer">
+      <%= f.check_box :glucagon %>
+  </label>
+</div>
+</li>
+<li>
+<div class="radio">
+  <label>
+    <%= f.label :EpiPen,:class=>"control-label"  %>
+      <div class="col-sm-1  inputGroupContainer">
+      <%= f.check_box :epipen %>
+  </label>
+</div>
+</li>
+</ul>
+  </div>
+     <div class="col-md-12 col-sm-12 col-lg-12">
+	 <div class="form-group">
+    <%= f.text_field :other,:class=>"form-control",:placeholder => "Other" %>
+  </div>
+	</div>
+  			<div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+  <div class="form-group">
+  <%= f.text_field :date_of_training,:class=>"form-control",:placeholder => "Date Of Training" %>
+  </div>
+  <div class="form-group plusinput">
+    <%= f.text_field :signature_of_dd,:class=>"form-control",:placeholder => "Signature of DD Person receiving traning" %>
+  </div>
+
+<div class="form-group">
+    <%= f.text_field :date_first_compleated_person,:class=>"form-control",:placeholder => "Date First completed by Person" %>
+  </div>
+<div class="form-group">
+    <%= f.text_field :date_of_update,:class=>"form-control",:placeholder => "Date of Update/Changes" %>
+  </div>
+  </div>
+    <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+  <div class="form-group">
+  <%= f.text_field :time,:class=>"form-control",:placeholder => "Time" %>
+  </div>
+  <div class="form-group plusinput">
+    <%= f.text_field :signature_of_trainer,:class=>"form-control",:placeholder => "Signature of Trainer" %>
+  </div>
+<div class="form-group">
+    <%= f.text_field :date_of_update,:class=>"form-control",:placeholder => "Date of Update/Changes" %>
+  </div>
+<div class="form-group">
+     <%= f.text_field :date_of_update,:class=>"form-control",:placeholder => "Date of Update/Changes" %>
+  </div>
+  </div>
+  <div href="">
+    <%= f.submit 'Add New Section', class: "btn btn-info" %>
+  </div>
+  <% end %>
+</form>
+					
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="/assets/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/assets/js/metisMenu.min.js"></script>
+
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/assets/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>

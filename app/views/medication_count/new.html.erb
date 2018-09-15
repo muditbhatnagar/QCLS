@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +11,7 @@
     <meta name="author" content="">
 
     <title>Q C L S</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> 
     <!-- Bootstrap Core CSS -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
 
@@ -21,7 +22,7 @@
     <link href="/assets/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="/aasets/css/morris.css" rel="stylesheet">
+    <link href="/assets/css/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="https://fontawesome.com/v4.7.0/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
@@ -34,11 +35,8 @@
     <![endif]-->
 
 </head>
-
 <body>
-
     <div id="wrapper">
-
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header col-md-6">
@@ -49,7 +47,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="index.html"><img src="/assets/logo.png" alt=""></a>
-        <span>Quality Comfort Living Services LLC</span>
+				<span>Quality Comfort Living Services LLC</span>
             </div>
             <!-- /.navbar-header -->
 
@@ -84,7 +82,7 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-          <li>
+					<li>
                             <a href="javascript:;"><img src="/assets/left_icon1.png" alt=""> Settings</a>
                         </li>
                         <li>
@@ -93,30 +91,32 @@
                                 <li>
                                     <a href="javascript:;">Individuals</a>
                                 </li>
-                </ul>
+								</ul>
                         </li>
                         <li>
                             <a href="javascript:;"><img src="/assets/left_icon3.png" alt=""> eDoc Suite</a>
-              <ul class="nav nav-second-level">
+							<ul class="nav nav-second-level">
                                 <li>
                                     <a href="javascript:;">ISP/BSP Training</a>
                                 </li>
                                 <li>
                                   <a href="/individual/form2">Monthly Service</a>
                                 </li>
-                                 <li>
-                                    <a href="javascript:;">Monthly Bihaviour</a>
                                 </li>
-                                 <li>
-                                    <a href="javascript:;">Medication</a>
+                                <li>
+                                  <a href="javascript:;">Monthly Bihaviour</a>
                                 </li>
-                                 <li>
-                                    <a href="javascript:;">Administration Record</a>
+                                <li>
+                                  <a href="javascript:;">Medication</a>
                                 </li>
-                                 <li>
-                                    <a href="javascript:;">Medication Count</a>
+                                <li>
+                                  <a href="javascript:;">Administration Record</a>
                                 </li>
-                </ul>
+                                <li>
+                                  <a href="javascript:;">Medication Count</a>
+                                </li>
+                                 
+								</ul>
                         </li>
                         <li>
                             <a href="javascript:;"><img src="/assets/left_icon4.png" alt=""> Folders</a>
@@ -142,47 +142,76 @@
 
         <div id="page-wrapper">
             <div class="row">
-      <form class="fromlist">
-      <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+			<!-- <form class="fromlist"> -->
+  <%= form_for @medicationcount, :url => {:action => "create" },  :html => {class: 'fromlist' } do |f| %>
+			<div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
   <div class="form-group">
-  <input type="email" class="form-control" placeholder="Individual Name">
+  <%= f.text_field :name,:class=>"form-control",:placeholder => "Name" %>
   </div>
-  <div class="form-group plusinput">
-    <input type="text" class="form-control" placeholder="Signature of DD Personal Receiving Traning">
+  <div class="form-group ">
+     <%= f.text_field :date,:class=>"form-control",:placeholder => "Date" %>
   </div>
 
-<div class="form-group plusinput">
-    <input type="text" class="form-control" placeholder="Signature of Trainer">
+<div class="form-group ">
+    <%= f.text_field :amount_on_hand,:class=>"form-control",:placeholder => "Amount On Hand" %>
+  </div>
+  <div class="form-group">
+     <%= f.text_field :amount_left,:class=>"form-control",:placeholder => "Amount Left" %>
   </div>
   <div class="form-group">
     <input type="text" class="form-control" placeholder="Date of Update/Changes">
-  </div>
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="Date of Update/Changes">
+    <%= f.text_field :date_of_update,:class=>"form-control",:placeholder => "Date of Update/Changes" %>
   </div>
   </div>
   <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
   <div class="form-group">
-  <input type="email" class="form-control" placeholder="Initial">
+   <%= f.text_field :medication_order,:class=>"form-control",:placeholder => "Medication Order" %>
   </div>
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Date of Training">
+     <%= f.text_field :time,:class=>"form-control",:placeholder => "Time" %>
   </div>
-
 <div class="form-group">
-    <input type="text" class="form-control" placeholder="Date First Task Completed By Person">
+    <%= f.text_field :amount_used,:class=>"form-control",:placeholder => "Amount Used" %>
   </div>
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Date of Update/Changes">
+    <input type="text" class="form-control" placeholder="Staff Initials">
+    <%= f.text_field :staff_initials,:class=>"form-control",:placeholder => "Staff Initials" %>
   </div>
 
+  </div>
+  <div class="col-md-12 col-sm-12 col-lg-12 medicaldics">Medical Discontinued</div>
+  			<div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+  <div class="form-group">
+   <%= f.text_field :discontinued_date,:class=>"form-control",:placeholder => "Discontinued Date" %>
+  </div>
+  <div class="form-group plusinput">
+    <%= f.text_field :medication_disposal_mgt,:class=>"form-control",:placeholder => "Medication Disposal Mgt. Signature" %>
+  </div>
+
+<div class="form-group plusinput">
+     <%= f.text_field :certified_staff_signature,:class=>"form-control",:placeholder => "Certified Staff Signature & Initials" %>
+  </div>
+
+  </div>
+    <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+  <div class="form-group">
+  <%= f.text_field :medication_disposal_location,:class=>"form-control",:placeholder => "Medication Disposal Location" %>
+  </div>
+  <div class="form-group plusinput">
+    <input type="text" class="form-control" placeholder="Certified Staff Signature & Initials">
+    <%= f.text_field :certified_staff_signature,:class=>"form-control",:placeholder => "Certified Staff Signature & Initials" %>
+  </div>
+<div class="form-group plusinput">
+    <%= f.text_field :certified_staff_signature,:class=>"form-control",:placeholder => "Certified Staff Signature & Initials" %>
+  </div>
 
   </div>
   <div class="col-md-12 col-sm-12 savebut">
-  <button type="submit" class="btn btn-default">Save</button>
+  <button type="submit" class="btn btn-default">Add New Section</button>
   </div>
+  <% end %>
 </form>
-          
+					
             </div>
             <!-- /.row -->
         </div>

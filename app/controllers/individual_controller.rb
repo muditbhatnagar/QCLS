@@ -13,10 +13,18 @@ class IndividualController < ApplicationController
 	end
 
 	def show
-		@individual = Individual.find(params[:id])
+		#@individual = Individual.find(params[:id])
 	end
 
 	def index
+		@individual = Individual.all
+	end
+
+	def form
+		@individual = Individual.all
+	end
+
+	def form1
 		@individual = Individual.all
 	end
 

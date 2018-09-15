@@ -96,7 +96,28 @@
                         </li>
                         <li>
                             <a href="javascript:;"><img src="/assets/left_icon3.png" alt=""> eDoc Suite</a>
-                        </li>
+              <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="javascript:;">ISP/BSP Training</a>
+                                </li>
+                                <li>
+                                  <a href="/individual/form2">Monthly Service</a>
+                                </li>
+                                </li>
+                                <li>
+                                  <a href="javascript:;">Monthly Bihaviour</a>
+                                </li>
+                                <li>
+                                  <a href="javascript:;">Medication</a>
+                                </li>
+                                <li>
+                                  <a href="javascript:;">Administration Record</a>
+                                </li>
+                                <li>
+                                  <a href="javascript:;">Medication Count</a>
+                                </li>
+                                
+                </ul>
                         <li>
                             <a href="javascript:;"><img src="/assets/left_icon4.png" alt=""> Folders</a>
                         </li>
@@ -184,6 +205,9 @@
       <td><%= individual.individual_id %></td>
       <td><%= individual.first_name %></td>
       <td><%= individual.last_name %></td>
+      <td><%= individual.created_by %></td>
+      <td><img src="/assets/active.png" ><%= individual.status %></td>
+      <td><button><a href="/individual/new"><img src="/assets/setting.png" > Edit</button></td>
     </tr>
 </body>
 <% end %>

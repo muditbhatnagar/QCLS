@@ -1,0 +1,2 @@
+module AdministrationRecordHelper
+end

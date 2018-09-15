@@ -1,0 +1,2 @@
+class MonthlyBehaviour < ApplicationRecord
+end

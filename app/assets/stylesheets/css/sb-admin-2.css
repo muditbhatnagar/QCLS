@@ -508,7 +508,7 @@ ul.list_select {
 ul.list_select {
 	margin: 0px;
 	padding: 0px;
-	width: 54%;
+	width: 50%;
 	float: left;
 }
 .input-group .form-control {
@@ -597,9 +597,10 @@ ul.list_select {
 	padding-left: 0;
 	font-size: 17px;
 	color: #525b5e;
-	padding-bottom: 40px;
+	padding-bottom: 25px;
 	margin-bottom: 38px;
 	border-radius: 0;
+	padding-top: 22px;
 }
 .checkbox-inline, .radio-inline {
 	position: relative;
@@ -617,7 +618,7 @@ ul.list_select {
 	border-top: 0px;
 	border-left: 0;
 	border-right: 0;
-	background: transparent url('/assets/arrow_down.png');
+	background: transparent url('../images/arrow_down.png');
 	box-shadow: inherit;
 	padding-left: 0;
 	font-size: 17px;
@@ -657,9 +658,9 @@ select {
 .medicaldics::before {
 	background: #000;
 	position: absolute;
-	width: 810px;
-	right: 0px;
-	content: '';
+	width: 820px;
+	left: 180px;
+	/*content: '';*/
 	height: 1px;
 	top: 13px;
 }
@@ -703,7 +704,7 @@ select {
 	border-top: 0;
 	border-radius: 0;
 	box-shadow: inherit;
-	padding-bottom: 18px;
+	padding-bottom: 8px;
 	margin-bottom: 35px;
 	padding-left: 0;
 }
@@ -737,7 +738,15 @@ margin-top: 35px;
 	position: absolute;
 	margin-top: 4px\9;
 	margin-left:-20px !important;
+	 
+    top: 1px;
 }
+
+.chksign  { 
+	right: 380px !important;
+    
+}
+
 .medicaldicsnew {
 	font-size: 17px;
 	position: relative;
